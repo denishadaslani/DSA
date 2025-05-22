@@ -13,7 +13,7 @@ main()
         cin >> a[i];
     }
     cout << endl;
-    cout << "Output of Array Element:-"<<endl;
+    cout << "Output of Array Element:-" << endl;
     for (i = 0; i < n; i++)
     {
         cout << a[i] << " ";

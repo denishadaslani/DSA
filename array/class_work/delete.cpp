@@ -20,16 +20,34 @@ main()
         cout << a[i] << " ";
     }
     cout << endl;
-    int index, value;
-
-    cout << "Enter Index Where you want to update :-";
+    int index;
+    cout << "Enter Index Where you want to Delete Element:-";
     cin >> index;
 
-    cout << "Enter value which you want to update :-";
-    cin >> value;
+    for (int i = index; i <= n - 1; i++)
+    {
+        a[i] = a[i + 1];
+    }
+    n--;
 
-    a[index] = value;
-
+    cout << "Output of Array Element:-" << endl;
+    for (i = 0; i < n; i++)
+    {
+        cout << a[i] << " ";
+    }
+}
+// static
+#include <iostream>
+using namespace std;
+main()
+{
+    int i, n = 6, a[50] = {10, 20, 25, 30, 40, 50};
+    int index = 2;
+    for (i = index; i < n - 1; i++)
+    {
+        a[i] = a[i + 1];
+    }
+    n--;
     cout << "Output of Array Element:-" << endl;
     for (i = 0; i < n; i++)
     {

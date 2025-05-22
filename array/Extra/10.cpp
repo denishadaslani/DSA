@@ -3,7 +3,7 @@ using namespace std;
 main()
 {
     int i, n;
-    cout << "Enter The Size Of Array Element:-" << endl;
+    cout << "Enter The Size Of Array Element:-";
     cin >> n;
     cout << endl;
     int a[n];
