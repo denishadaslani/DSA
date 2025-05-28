@@ -17,9 +17,12 @@ main()
         cout << a[i] << " ";
     }
     cout << endl;
-    cout << "Find The index First Occurence of Element only first occurence:- ";
+    cout << "Find The index First Occurence of Element only first occurence:- " << endl;
     int firstoccurence;
+    cout << "Enter first occurence:-";
+
     cin >> firstoccurence;
+    
     for (i = 0; i < n; i++)
     {
         if (a[i] == firstoccurence)

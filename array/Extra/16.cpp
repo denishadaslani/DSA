@@ -29,7 +29,9 @@ main()
     {
         a[i + 1] = a[i];
     }
+
     a[index] = value;
+
     n++;
     cout << "New Array Element:-" << endl;
     for (i = 0; i < n; i++)

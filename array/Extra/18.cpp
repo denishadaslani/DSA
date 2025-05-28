@@ -23,15 +23,20 @@ main()
     cout << "Enter Element:-";
     cin >> check;
 
+    int found = 0;
+
     for (i = 0; i < n; i++)
     {
         if (a[i] == check)
         {
             cout << "Element is Exits in Array" << endl;
+            found = 1;
+            break;
         }
-        else
-        {
-            cout << "Element is not Exits in Array" << endl;
-        }
+    }
+
+    if (found == 0)
+    {
+        cout << "Element is not Exits in Array" << endl;
     }
 }

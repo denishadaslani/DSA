@@ -1,46 +1,39 @@
 #include <iostream>
 using namespace std;
-main()
-{
-    int row, col, i, j;
 
-    cout << "input of Array:- " << endl;
-    cout << "Enter The number of Row:- ";
-    cin >> row;
-    cout << "Enter The number of col:-";
-    cin >> col;
-    int a[row][col];
-    cout << "input of Array:- " << endl;
-    for (i = 0; i < row; i++)
+int main()
+{
+    int n, i;
+
+    cout << "Enter the size of square matrix (n): ";
+    cin >> n;
+
+    int size = n * n;
+    int a[size];
+
+    cout << "Input of Array:" << endl;
+    for (i = 0; i < size; i++)
     {
-        for (j = 0; j < col; j++)
-        {
-            cout << "Enter the value [" << i << "][" << j << "]:- ";
-            cin >> a[i][j];
-        }
+        cout << "Enter the value [" << i << "]: ";
+        cin >> a[i];
     }
-    cout << "Output of Array:- " << endl;
-    for (i = 0; i < row; i++)
+
+    cout << "\nOutput of Array:" << endl;
+    for (i = 0; i < size; i++)
     {
-        for (j = 0; j < col; j++)
-        {
-            cout << a[i][j] << " ";
-        }
-        cout << endl;
+        cout << a[i] << " ";
     }
     cout << endl;
-    int sum = 0;
-    for (i = 0; i < row; i++)
+
+   
+    int diagonalSum = 0;
+    for (i = 0; i < n; i++)
     {
-        for (j = 0; j < col; j++)
-        {
-            if (i == j)
-            {
-                cout << a[i][j] << " ";
-                sum = sum + a[i][j];
-            }
-        }
+        int index = i * n + i;
+        cout << "i = " << i << "  index = " << index << "  value = " << a[index] << endl;
+        diagonalSum += a[index];
     }
-    cout << endl;
-    cout << "Sum of Diagonal Elements:- " << sum << endl;
+
+    cout << "Sum of diagonal elements: " << diagonalSum << endl;
+
 }

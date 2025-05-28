@@ -20,18 +20,20 @@ main()
     }
     cout << endl;
     cout << "Frequency Of Array Element:-" << endl;
-    int count = 1;
-    // single loop
     for (i = 0; i < n; i++)
     {
-        if (a[i] == a[i + 1])
+        int count = 1;
+        for (int j = i + 1; j < n; j++)
         {
-            count++;
+            if (a[i] == a[j])
+            {
+                a[j] = '\0';
+                count++;
+            }
         }
-        else
+        if (a[i] != 0)
         {
-            cout << a[i] << " " << count << endl;
-            count = 1;
+            cout << a[i] << " " << count << " times" << endl;
         }
     }
 }

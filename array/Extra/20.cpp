@@ -12,12 +12,13 @@ main()
         cin >> a[i];
     }
     cout << "Output of Array Element:-" << endl;
+
     for (i = 0; i < n; i++)
     {
         cout << a[i] << " ";
     }
     cout << endl;
-    cout << "index of last occurence of element:-";
+    cout << "index of last occurence of element:- ";
     int lastoccurence;
     cin >> lastoccurence;
 
