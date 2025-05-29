@@ -1,45 +1,44 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
-    int arr[100], temp[100], n, k;
-
-    cout << "Enter size of array: ";
-    cin >> n;
-
-    cout << "Enter " << n << " elements:\n";
-    for (int i = 0; i < n; i++)
-    {
-        cout << "Element [" << i << "]";
-        cin >> arr[i];
+int main() {
+    int size, i;
+    cout << "Enter Size:-";
+    cin >> size;
+    int a[size];
+    cout << "Input of Array:-" << endl;
+    for (i = 0; i < size; i++) {
+        cout << "Enter the value [" << i << "]:-";
+        cin >> a[i];
     }
+    cout << "Output of Array:-" << endl;
+    for (i = 0; i < size; i++) {
+        cout << a[i] << " ";
+    }
+    cout << endl;
 
-    cout << "Enter K (right rotation): ";
+    cout << "Rotate an Array To The Right By K positions:-" << endl;
+    int k;
+    cout << "Enter the value of K:-";
     cin >> k;
 
-    int j = 0;
-    for (int i = n - k; i < n; i++)
-    {
-        temp[j] = arr[i];
+    // Adjust k if greater than size
+    k = k % size;
 
-        for (int i = 0; i < n - k; i++)
-        {
-            temp[j] = arr[i];
-            j++;
+    // Rotate right by shifting right k times
+    for (i = 0; i < k; i++) {
+        int temp = a[size - 1];  // Save last element
+        for (int j = size - 1; j > 0; j--) {
+            a[j] = a[j - 1];     // Shift right
         }
-
-        for (int i = 0; i < n; i++)
-        {
-            arr[i] = temp[i];
-        }
-
-        cout << "Array after right rotation:\n";
-        for (int i = 0; i < n; i++)
-        {
-            cout << arr[i] << " ";
-        }
-
-        return 0;
+        a[0] = temp;             // Put last element at front
     }
+
+    cout << "Output of Array:-" << endl;
+    for (i = 0; i < size; i++) {
+        cout << a[i] << " ";
+    }
+    cout << endl;
+
+    return 0;
 }

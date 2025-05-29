@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-    int size,i;
+    int size, i;
     cout << "Enter Size of Array:- ";
     cin >> size;
 
@@ -35,5 +35,8 @@ int main()
             largest = a[i];
         }
     }
-    cout << "The largest number smaller than " << num << " is " << largest;
+    if (largest == -1)
+        cout << "No number is smaller than " << num << endl;
+    else
+        cout << "The largest number smaller than " << num << " is " << largest << endl;
 }
