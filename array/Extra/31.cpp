@@ -10,6 +10,7 @@ int main()
 
     int a[size];
     cout << "Enter elements of the array:" << endl;
+    
     for (int i = 0; i < size; i++)
     {
         cout << "Enter the value [" << i << "]: ";

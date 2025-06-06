@@ -26,12 +26,12 @@ int main()
     }
 
     cout << "Intersection (common elements in both arrays):" << endl;
+    bool found = false; // Flag to track if any intersection found
 
     for (int i = 0; i < size1; i++)
     {
         bool alreadyPrinted = false;
 
-        // Check if a[i] already printed
         for (int k = 0; k < i; k++)
         {
             if (a[i] == a[k])
@@ -49,9 +49,15 @@ int main()
             if (a[i] == b[j])
             {
                 cout << a[i] << " ";
+                found = true;
                 break;
             }
         }
+    }
+
+    if (!found)
+    {
+        cout << "No intersection found.";
     }
 
     cout << endl;

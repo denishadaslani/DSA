@@ -1,30 +1,48 @@
 #include <iostream>
 using namespace std;
 
-int main() {
+int main()
+{
     int n;
-    cout << "Enter any number: ";
+    cout << "Enter number of size: ";
     cin >> n;
 
-    if (n <= 1) {
-        cout << n << " is not prime." << endl;
-        return 0;
+    int arr[n]; // Assuming max 100 elements, adjust if needed
+
+    cout << "Enter " << n << " numbers:" << endl;
+    for (int i = 0; i < n; i++)
+    {
+        cout << "Enter number " << "[" << i << "] " << ": ";
+        cin >> arr[i];
     }
 
-    bool isPrime = true;
+    int primeCount = 0;
 
-    for (int i = 2; i <= n / 2; i++) {
-        if (n % i == 0) {
-            isPrime = false;
-            break;
+    for (int i = 0; i < n; i++)
+    {
+        int num = arr[i];
+        if (num < 2)
+        {
+            continue;
+        }
+
+        bool isPrime = true;
+        for (int j = 2; j < num; j++)
+        {
+            if (num % j == 0)
+            {
+                isPrime = false;
+                break;
+            }
+        }
+
+        if (isPrime)
+        {
+            primeCount++;
         }
     }
 
-    if (isPrime) {
-        cout << n << " is prime." << endl;
-    } else {
-        cout << n << " is not prime." << endl;
-    }
+    cout << "Count of prime numbers in the array: " << primeCount << endl;
 
     return 0;
 }

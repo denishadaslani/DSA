@@ -26,6 +26,7 @@ main()
         {
             sum = sum + a[i];
         }
+       
     }
     cout << endl;
     cout << "Output of Array Even Element Indices:-" << endl;

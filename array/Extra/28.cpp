@@ -13,6 +13,8 @@ main()
         cout << "Enter the value [" << i << "]:-";
         cin >> a[i];
     }
+
+    
     cout << "Enter the size of second array:-";
     cin >> size2;
     int b[size2];
