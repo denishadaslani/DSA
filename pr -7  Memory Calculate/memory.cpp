@@ -76,9 +76,12 @@ int main()
             {
                 if (students[i].getId() == id)
                 {
+                    students[i] = students[students.size() - 1];
                     students.pop_back();
+                    break;
                 }
             }
+
             cout << "---------Remove student Successfully---------" << endl;
             break;
 
