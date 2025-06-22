@@ -33,6 +33,7 @@ int main()
     int id, i;
     string name;
     int ch;
+    int count = 0;
 
     while (1)
     {
@@ -76,25 +77,37 @@ int main()
             {
                 if (students[i].getId() == id)
                 {
+                    count = 1;
                     students[i] = students[students.size() - 1];
                     students.pop_back();
                     break;
                 }
             }
-
+            if (count == 0)
+            {
+                cout << "ID not found" << endl;
+            }
             cout << "---------Remove student Successfully---------" << endl;
             break;
 
         case 4:
+            count = 0;
             cout << "Enter ID to search: ";
             cin >> id;
             for (i = 0; i < students.size(); i++)
             {
                 if (students[i].getId() == id)
                 {
+                    count = 1;
                     students[i].display();
+                    break;
                 }
             }
+            if (count == 0)
+            {
+                cout << "ID not found" << endl;
+            }
+
             cout << "---------Search student Successfully---------" << endl;
             break;
 
