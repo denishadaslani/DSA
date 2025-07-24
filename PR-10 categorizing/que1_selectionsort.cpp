@@ -19,13 +19,13 @@ int main()
         cout << a[i] << " ";
     }
     cout << endl;
-    cout << "Sort an array in descending order using selection sort.";
+    cout << "Sort an array in ascending order using selection sort.";
     for (i = 0; i < size - 1; i++)
     {
         int minindex = i;
         for (j = i + 1; j < size; j++)
         {
-            if (a[j] > a[minindex])
+            if (a[j] < a[minindex])
             {
                 minindex = j;
             }
